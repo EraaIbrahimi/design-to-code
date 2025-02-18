@@ -1,0 +1,464 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  /* position: relative; */
+  font-family: "Roboto Slab" !important;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.bolder {
+  font-weight: 500;
+}
+
+.yellow-blob {
+  position: absolute;
+  width: 566.83px;
+  height: 655.64px;
+  left: -367px;
+  top: -238px;
+  z-index: -5;
+}
+
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+}
+
+.header-container,
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > .yellow-blob {
+  left: -35%;
+  top: -238px;
+  z-index: -7;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  bottom: -35%;
+  z-index: -9999;
+}
+.right {
+  position: absolute;
+  right: -50.5%;
+  bottom: -50%;
+  z-index: -9999;
+}
+
+header {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  color: #000000;
+  padding: 40px 0;
+  gap: 32%;
+  position: relative;
+}
+
+header .company-name {
+  font-weight: 300;
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 0.2em;
+}
+
+header > nav {
+  font-weight: 300;
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 0.2em;
+
+  max-width: 46.3%;
+  width: 100%;
+}
+
+header > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 7%;
+}
+
+ul :nth-child(3) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #000000;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* 1. WELCOME SECTION */
+.welcome-section {
+  max-width: 1260px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image-wrapper {
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
+}
+.welcome-section img {
+  width: 100%;
+}
+
+.main-image-wrapper img {
+  z-index: -1;
+  position: relative;
+}
+
+.main-image-wrapper .blue-blob {
+  position: absolute;
+  bottom: 15.5%;
+  height: 17%;
+  z-index: 900;
+}
+
+.main-image-wrapper .white-blob {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0px;
+  bottom: -9%;
+
+  z-index: 990;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 999;
+}
+
+/* TITLES */
+.welcome-text h1,
+.employee-info h2,
+.work-env-info h2,
+.employee-profile-info h2,
+.contact-info h2,
+.job-application h2 {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.welcome-text h1 {
+  font-size: 30px;
+}
+
+.welcome-text p,
+.employee-info p,
+.work-env-info p,
+.employee-profile-info p,
+.contact-info p,
+.job-application p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.welcome-paragraph {
+  width: 84%;
+}
+
+/* 3 EMPLOYEES SECTION */
+
+.employees-section {
+  max-width: 1260px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 7.5%;
+}
+
+.employee {
+  align-self: center;
+}
+
+.employee-image,
+.employee-info {
+  max-width: 350px;
+  width: 100%;
+}
+
+.employee-image {
+  position: relative;
+}
+
+.blue-rect {
+  background-color: #1a8198;
+  max-width: 365px;
+  width: 100%;
+  height: 312px;
+  position: absolute;
+  z-index: -1;
+  top: 15%;
+  left: 5%;
+}
+
+.employees-section :nth-child(even) .blue-rect {
+  top: -5%;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.employee-info p {
+  text-align: center;
+}
+
+.employee-info a,
+.work-env-info a,
+.employee-profile-info a,
+.contact a {
+  padding: 15px 50px;
+  text-decoration: none;
+  color: white;
+  background: #26a4bf;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 4 WORK ENVIRONMENT SECTION */
+
+.work-env-wrapper,
+.employee-profile-wrapper {
+  background-color: #26a4bf;
+  width: 100vw;
+  margin-left: caLc(-50vw + 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  min-height: 373px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.work-env-section,
+.employee-profile-section {
+  max-width: 1040px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12%;
+}
+
+.work-env-image,
+.employee-profile-image {
+  position: relative;
+  max-width: 506px;
+  width: 100%;
+  height: auto;
+  z-index: 900;
+}
+
+.work-env-image img {
+  width: 100%;
+}
+
+.work-env-image > .blue-rect {
+  max-width: 398px;
+  width: 100%;
+  height: 356px;
+  top: 10%;
+  left: 25%;
+}
+.employee-profile-image > .blue-rect {
+  max-width: 262px;
+  width: 100%;
+  height: 412px;
+  left: 43%;
+  top: 22%;
+}
+
+.work-env-info,
+.employee-profile-info {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  width: 49%;
+}
+
+.work-env-info p {
+  text-align: right;
+}
+
+.work-env-info a {
+  color: #2e2e2e;
+  background-color: #e8e36d;
+  width: 180px;
+}
+
+/* 5 EMPLOYEE PROFILE SECTION */
+.employee-profile-wrapper {
+  background-color: #ffffff;
+}
+
+.employee-profile-info {
+  color: #000000;
+}
+
+.employee-profile-info p {
+  text-align: right;
+}
+
+.employee-profile-info a {
+  align-self: flex-end;
+}
+
+/* 6 FOOTER  */
+.footer-container {
+  background-color: #1a8198;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  gap: 58px;
+}
+.contact {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 49%;
+}
+
+.job-application {
+  width: 49%;
+}
+
+.contact a {
+  background-color: #26a4bf;
+}
+
+.copyright {
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.vertical-line {
+  width: 2px;
+  height: auto;
+  color: #e8e36d;
+  background-color: #499aac;
+}
+
+.horizontal-line {
+  width: 31px;
+  background-color: #000000;
+  height: 3px;
+}
