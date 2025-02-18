@@ -110,12 +110,6 @@ header > .yellow-blob {
   bottom: -35%;
   z-index: -9999;
 }
-.right {
-  position: absolute;
-  right: -50.5%;
-  bottom: -50%;
-  z-index: -9999;
-}
 
 header {
   max-width: 1240px;
@@ -330,6 +324,11 @@ ul li a {
   min-height: 373px;
   padding: 40px 0;
   position: relative;
+}
+
+.work-env-wrapper {
+  position: relative;
+  z-index: -2;
 }
 
 .work-env-section,
