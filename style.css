@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -17,7 +21,7 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   /* position: relative; */
-  font-family: "Roboto Slab" !important;
+  font-family: "Roboto Slab";
 }
 
 /* 5. Improve media defaults */
@@ -76,11 +80,12 @@ h6 {
 
 .yellow-blob {
   position: absolute;
-  width: 566.83px;
+  max-width: 567px;
+  width: 100%;
   height: 655.64px;
-  left: -367px;
-  top: -238px;
-  z-index: -5;
+  /* left: -367px;
+  top: -238px; */
+  z-index: 1;
 }
 
 .container {
@@ -98,17 +103,28 @@ h6 {
   align-items: center;
 }
 
+.footer-container {
+  position: relative;
+  bottom: 0px;
+}
+
 header > .yellow-blob {
   left: -35%;
   top: -238px;
-  z-index: -7;
+  z-index: -9999;
 }
 
 .left {
   position: absolute;
   top: 50%;
-  bottom: -35%;
+  left: -56%;
   z-index: -9999;
+}
+
+.right {
+  right: -85.5%;
+  top: -57%;
+  z-index: -1;
 }
 
 header {
@@ -120,6 +136,8 @@ header {
   align-items: center;
   z-index: 9999;
   color: #000000;
+  font-size: 16px;
+  font-size: 1rem;
   padding: 40px 0;
   gap: 32%;
   position: relative;
@@ -127,18 +145,15 @@ header {
 
 header .company-name {
   font-weight: 300;
-  font-size: 16px;
   text-align: justify;
   letter-spacing: 0.2em;
 }
 
 header > nav {
   font-weight: 300;
-  font-size: 16px;
-  text-align: justify;
-  letter-spacing: 0.2em;
-
-  max-width: 46.3%;
+  /* text-align: justify; */
+  /* letter-spacing: 0.2em; */
+  max-width: 49%;
   width: 100%;
 }
 
@@ -153,8 +168,10 @@ header > nav > ul {
 ul :nth-child(3) {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 15px;
+  margin-top: 15px;
 }
 
 ul li a {
@@ -173,11 +190,13 @@ ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 120000;
 }
 
 .main-image-wrapper {
   position: relative;
-  max-width: 1240px;
+  max-width: 1239px;
   width: 100%;
 }
 .welcome-section img {
@@ -185,7 +204,6 @@ ul li a {
 }
 
 .main-image-wrapper img {
-  z-index: -1;
   position: relative;
 }
 
@@ -193,7 +211,7 @@ ul li a {
   position: absolute;
   bottom: 15.5%;
   height: 17%;
-  z-index: 900;
+  z-index: 1100;
 }
 
 .main-image-wrapper .white-blob {
@@ -202,8 +220,7 @@ ul li a {
   height: 20%;
   left: 0px;
   bottom: -9%;
-
-  z-index: 990;
+  z-index: 1111;
 }
 
 .welcome-text {
@@ -213,7 +230,8 @@ ul li a {
   align-items: center;
   gap: 20px;
   position: relative;
-  z-index: 999;
+  z-index: 120001;
+  margin-top: -4px;
 }
 
 /* TITLES */
@@ -225,10 +243,17 @@ ul li a {
 .job-application h2 {
   font-weight: 300;
   font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .welcome-text h1 {
   font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.welcome-title h1 {
+  position: relative;
+  z-index: 1112;
 }
 
 .welcome-text p,
@@ -239,6 +264,7 @@ ul li a {
 .job-application p {
   font-weight: 300;
   font-size: 16px;
+  font-size: 1rem;
 }
 
 .welcome-paragraph {
@@ -253,7 +279,7 @@ ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px 0;
+  padding: 80px 0;
   gap: 7.5%;
 }
 
@@ -308,6 +334,7 @@ ul li a {
   background: #26a4bf;
   font-weight: 700;
   font-size: 16px;
+  font-size: 1rem;
 }
 
 /* 4 WORK ENVIRONMENT SECTION */
@@ -320,15 +347,21 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: -2;
   min-height: 373px;
   padding: 40px 0;
   position: relative;
 }
 
+.employee-profile-wrapper {
+  z-index: -2;
+  padding-top: 90px;
+  padding-bottom: 125px;
+}
+
 .work-env-wrapper {
   position: relative;
-  z-index: -2;
+  z-index: -1;
+  padding-bottom: 52px;
 }
 
 .work-env-section,
@@ -378,6 +411,7 @@ ul li a {
   align-items: flex-end;
   gap: 20px;
   width: 49%;
+  position: relative;
 }
 
 .work-env-info p {
@@ -451,8 +485,6 @@ footer {
 
 .vertical-line {
   width: 2px;
-  height: auto;
-  color: #e8e36d;
   background-color: #499aac;
 }
 
