@@ -1,5 +1,7 @@
 :root {
   font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -16,8 +18,6 @@
 }
 
 body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   /* position: relative; */
@@ -83,9 +83,9 @@ h6 {
   max-width: 567px;
   width: 100%;
   height: 655.64px;
-  /* left: -367px;
-  top: -238px; */
   z-index: 1;
+  background-image: url("./assets/icons/yellow-blob.svg");
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -94,6 +94,7 @@ h6 {
   margin: 0 auto;
   box-sizing: border-box;
   display: block;
+  z-index: -3000000;
 }
 
 .header-container,
@@ -119,12 +120,15 @@ header > .yellow-blob {
   top: 50%;
   left: -56%;
   z-index: -9999;
+  background-position: top right;
 }
 
 .right {
-  right: -85.5%;
-  top: -57%;
-  z-index: -1;
+  position: absolute;
+  width: 100%;
+  left: 74%;
+  bottom: 65%;
+  z-index: -9999;
 }
 
 header {
@@ -138,6 +142,7 @@ header {
   color: #000000;
   font-size: 16px;
   font-size: 1rem;
+  letter-spacing: 0.2em;
   padding: 40px 0;
   gap: 32%;
   position: relative;
@@ -146,13 +151,26 @@ header {
 header .company-name {
   font-weight: 300;
   text-align: justify;
-  letter-spacing: 0.2em;
+}
+
+header > nav,
+footer > nav {
+  font-weight: 300;
+  max-width: 49%;
+  width: 100%;
+}
+
+header > nav > ul,
+footer > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 7%;
 }
 
 header > nav {
   font-weight: 300;
-  /* text-align: justify; */
-  /* letter-spacing: 0.2em; */
   max-width: 49%;
   width: 100%;
 }
@@ -165,7 +183,7 @@ header > nav > ul {
   gap: 7%;
 }
 
-ul :nth-child(3) {
+header nav ul :nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,11 +192,11 @@ ul :nth-child(3) {
   margin-top: 15px;
 }
 
-ul li a {
+ul li a,
+footer .copyright nav ul li a {
   text-decoration: none;
   text-transform: lowercase;
   color: #000000;
-  letter-spacing: 0.2em;
   text-align: center;
 }
 
@@ -195,7 +213,7 @@ ul li a {
 }
 
 .main-image-wrapper {
-  position: relative;
+  /* position: relative; */
   max-width: 1239px;
   width: 100%;
 }
@@ -244,6 +262,21 @@ ul li a {
   font-weight: 300;
   font-size: 25px;
   font-size: 1.5625rem;
+  letter-spacing: 0.2em;
+}
+
+.welcome-text-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-text-title,
+.employee-info-title,
+.work-env-info-title,
+.employee-profile-info-title {
+  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 .welcome-text h1 {
@@ -343,7 +376,8 @@ ul li a {
 .employee-profile-wrapper {
   background-color: #26a4bf;
   width: 100vw;
-  margin-left: caLc(-50vw + 50%);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,6 +390,11 @@ ul li a {
   z-index: -2;
   padding-top: 90px;
   padding-bottom: 125px;
+  /* max-width: 1040px; */
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .work-env-wrapper {
@@ -369,9 +408,12 @@ ul li a {
   max-width: 1040px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12%;
+}
+.work-env-section {
+  gap: 13%;
 }
 
 .work-env-image,
@@ -384,6 +426,7 @@ ul li a {
 }
 
 .work-env-image img {
+  max-width: 506px;
   width: 100%;
 }
 
@@ -410,8 +453,10 @@ ul li a {
   justify-content: center;
   align-items: flex-end;
   gap: 20px;
-  width: 49%;
+  max-width: 394px;
+  width: 100%;
   position: relative;
+  z-index: 100000;
 }
 
 .work-env-info p {
@@ -429,8 +474,14 @@ ul li a {
   background-color: #ffffff;
 }
 
+.employee-profile-image {
+  max-width: 470px;
+  width: 100%;
+}
+
 .employee-profile-info {
   color: #000000;
+  max-width: 558px;
 }
 
 .employee-profile-info p {
@@ -454,20 +505,25 @@ footer {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 30px;
+  line-height: 1.567rem;
   gap: 58px;
 }
 .contact {
-  color: #ffffff;
+  color: #ffffff !important;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .contact-info {
-  width: 49%;
+  max-width: 505px;
+  width: 100%;
 }
 
 .job-application {
-  width: 49%;
+  max-width: 505px;
+
+  width: 100%;
 }
 
 .contact a {
@@ -480,7 +536,19 @@ footer {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
+}
+
+.copyright nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 35px;
+  color: #ffffff;
+}
+
+footer .copyright nav ul li a {
+  color: #ffffff;
 }
 
 .vertical-line {
