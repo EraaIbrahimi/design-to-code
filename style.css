@@ -1,30 +1,27 @@
+/* RESET */
 :root {
   font-size: 16px;
+  font-weight: 300;
   letter-spacing: 0;
   line-height: 19px;
+  --active-color-gray: #a1a1a1;
+  --emphasis-color-blue: #1a8198;
+  --bold-text: 400;
+  width: 100%;
 }
 
-/* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
+  /* margin: 0 auto; */
   padding: 0;
 }
 
 body {
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-  /* position: relative; */
   font-family: "Roboto Slab";
 }
 
-/* 5. Improve media defaults */
 img,
 picture,
 video,
@@ -34,68 +31,133 @@ svg {
   max-width: 100%;
 }
 
-/* 6. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Improve line wrapping */
 p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-/*
-    9. Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
+/* --GENERAL CLASSES */
+
+.hide {
+  visibility: hidden;
 }
 
-.bolder {
-  font-weight: 500;
+/* CONTAINERS */
+.container-sm {
+  max-width: 1058px;
+  justify-content: center;
+  align-items: center;
+}
+.container-md {
+  max-width: 1041px;
+  justify-content: center;
+  align-items: center;
+}
+.container-lg {
+  max-width: 1240px;
+  justify-content: center;
+  align-items: center;
+}
+.container-xl {
+  max-width: 1260px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
+/* TEXT DECORATIONS */
+.gray-text-color {
+  color: var(--active-color-gray);
+}
+
+.blue-text-color {
+  color: var(--emphasis-color-blue);
+}
+
+.bold-text {
+  font-weight: var(--bold-text);
+}
+
+/* BACKGROUND IMAGES */
 .yellow-blob {
   position: absolute;
   max-width: 567px;
   width: 100%;
-  height: 655.64px;
+  aspect-ratio: 0.86 /1;
   z-index: 1;
   background-image: url("./assets/icons/yellow-blob.svg");
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
-
-.container {
-  max-width: 1260px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  display: block;
-  z-index: -3000000;
+.left-blob {
+  position: absolute;
+  top: 50%;
+  left: -56%;
+  z-index: -9999;
+  background-position: top right;
 }
+.right-blob {
+  position: absolute;
+  width: 100%;
+  left: 74%;
+  bottom: 65%;
+  z-index: -9999;
+}
+
+/* TITLES */
+.title {
+  font-weight: 300;
+  font-size: 1.5625rem;
+  letter-spacing: 0.2em;
+}
+.title-lg {
+  font-size: 1.875rem;
+}
+.title-paragraph {
+  line-height: 1.579;
+  display: flex;
+  flex-direction: column;
+}
+.title-paragraph-center {
+  align-items: center;
+}
+
+/* LINKS */
+.link {
+  max-width: 180px;
+  aspect-ratio: 1 / 0.2334;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background: #26a4bf;
+  font-weight: 700;
+}
+.yellow-link {
+  background: #e8e36d;
+  color: #2e2e2e;
+}
+.dark-blue-link {
+  background: #1a8198;
+}
+
+/* LINES */
+.vertical-line {
+  width: 2px;
+  height: 319px;
+  background-color: #499aac;
+}
+.horizontal-line {
+  width: 31px;
+  background-color: #000000;
+  height: 3px;
+}
+
+/* HEADER SECTION*/
 
 .header-container,
 .footer-container {
@@ -104,35 +166,14 @@ h6 {
   align-items: center;
 }
 
-.footer-container {
-  position: relative;
-  bottom: 0px;
-}
-
-header > .yellow-blob {
+/* fix blob to be in a pseudoelement */
+header .yellow-blob {
   left: -35%;
   top: -238px;
   z-index: -9999;
 }
 
-.left {
-  position: absolute;
-  top: 50%;
-  left: -56%;
-  z-index: -9999;
-  background-position: top right;
-}
-
-.right {
-  position: absolute;
-  width: 100%;
-  left: 74%;
-  bottom: 65%;
-  z-index: -9999;
-}
-
 header {
-  max-width: 1240px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -140,8 +181,6 @@ header {
   align-items: center;
   z-index: 9999;
   color: #000000;
-  font-size: 16px;
-  font-size: 1rem;
   letter-spacing: 0.2em;
   padding: 40px 0;
   gap: 32%;
@@ -153,15 +192,15 @@ header .company-name {
   text-align: justify;
 }
 
-header > nav,
-footer > nav {
+header nav,
+footer nav {
   font-weight: 300;
   max-width: 49%;
   width: 100%;
 }
 
-header > nav > ul,
-footer > nav > ul {
+header nav ul,
+footer nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -169,13 +208,13 @@ footer > nav > ul {
   gap: 7%;
 }
 
-header > nav {
+header nav {
   font-weight: 300;
   max-width: 49%;
   width: 100%;
 }
 
-header > nav > ul {
+header nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -183,7 +222,7 @@ header > nav > ul {
   gap: 7%;
 }
 
-header nav ul :nth-child(3) {
+header nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +231,7 @@ header nav ul :nth-child(3) {
   margin-top: 15px;
 }
 
-ul li a,
+header nav ul li a,
 footer .copyright nav ul li a {
   text-decoration: none;
   text-transform: lowercase;
@@ -202,8 +241,6 @@ footer .copyright nav ul li a {
 
 /* 1. WELCOME SECTION */
 .welcome-section {
-  max-width: 1260px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,36 +249,26 @@ footer .copyright nav ul li a {
   z-index: 120000;
 }
 
-.main-image-wrapper {
-  /* position: relative; */
-  max-width: 1239px;
-  width: 100%;
-}
-.welcome-section img {
-  width: 100%;
-}
-
 .main-image-wrapper img {
   position: relative;
 }
 
-.main-image-wrapper .blue-blob {
+.blue-mask {
   position: absolute;
   bottom: 15.5%;
   height: 17%;
   z-index: 1100;
 }
 
-.main-image-wrapper .white-blob {
+.white-mask {
   position: absolute;
   width: 100%;
   height: 20%;
-  left: 0px;
   bottom: -9%;
   z-index: 1111;
 }
 
-.welcome-text {
+.welcome-section-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,66 +279,18 @@ footer .copyright nav ul li a {
   margin-top: -4px;
 }
 
-/* TITLES */
-.welcome-text h1,
-.employee-info h2,
-.work-env-info h2,
-.employee-profile-info h2,
-.contact-info h2,
-.job-application h2 {
-  font-weight: 300;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  letter-spacing: 0.2em;
-}
-
-.welcome-text-title {
+.welcome-section-text-title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.welcome-text-title,
-.employee-info-title,
-.work-env-info-title,
-.employee-profile-info-title {
-  line-height: 30px;
-  line-height: 1.875rem;
-}
-
-.welcome-text h1 {
-  font-size: 30px;
-  font-size: 1.875rem;
-}
-
-.welcome-title h1 {
-  position: relative;
-  z-index: 1112;
-}
-
-.welcome-text p,
-.employee-info p,
-.work-env-info p,
-.employee-profile-info p,
-.contact-info p,
-.job-application p {
-  font-weight: 300;
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-.welcome-paragraph {
-  width: 84%;
-}
-
-/* 3 EMPLOYEES SECTION */
+/* 2 EMPLOYEES SECTION */
 
 .employees-section {
-  max-width: 1260px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 80px 0;
   gap: 7.5%;
 }
@@ -327,7 +306,7 @@ footer .copyright nav ul li a {
 }
 
 .employee-image {
-  position: relative;
+  box-shadow: 20px 20px #1a8198;
 }
 
 .blue-rect {
@@ -341,8 +320,8 @@ footer .copyright nav ul li a {
   left: 5%;
 }
 
-.employees-section :nth-child(even) .blue-rect {
-  top: -5%;
+.employees-section :nth-child(even) .employee-image {
+  box-shadow: 20px -20px #1a8198;
 }
 
 .employee-info {
@@ -357,27 +336,13 @@ footer .copyright nav ul li a {
   text-align: center;
 }
 
-.employee-info a,
-.work-env-info a,
-.employee-profile-info a,
-.contact a {
-  padding: 15px 50px;
-  text-decoration: none;
-  color: white;
-  background: #26a4bf;
-  font-weight: 700;
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-/* 4 WORK ENVIRONMENT SECTION */
+/* 3 WORK ENVIRONMENT SECTION & EMPLOYEE PROFILE SECTION*/
 
 .work-env-wrapper,
 .employee-profile-wrapper {
   background-color: #26a4bf;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,10 +355,8 @@ footer .copyright nav ul li a {
   z-index: -2;
   padding-top: 90px;
   padding-bottom: 125px;
-  /* max-width: 1040px; */
   width: 100%;
   align-items: center;
-  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -405,7 +368,6 @@ footer .copyright nav ul li a {
 
 .work-env-section,
 .employee-profile-section {
-  max-width: 1040px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -430,14 +392,14 @@ footer .copyright nav ul li a {
   width: 100%;
 }
 
-.work-env-image > .blue-rect {
+.work-env-image .blue-rect {
   max-width: 398px;
   width: 100%;
   height: 356px;
   top: 10%;
   left: 25%;
 }
-.employee-profile-image > .blue-rect {
+.employee-profile-image .blue-rect {
   max-width: 262px;
   width: 100%;
   height: 412px;
@@ -451,10 +413,11 @@ footer .copyright nav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
   gap: 20px;
   max-width: 394px;
   width: 100%;
+  margin: 0;
+  align-items: flex-end;
   position: relative;
   z-index: 100000;
 }
@@ -463,13 +426,7 @@ footer .copyright nav ul li a {
   text-align: right;
 }
 
-.work-env-info a {
-  color: #2e2e2e;
-  background-color: #e8e36d;
-  width: 180px;
-}
-
-/* 5 EMPLOYEE PROFILE SECTION */
+/* 4 EMPLOYEE PROFILE SECTION */
 .employee-profile-wrapper {
   background-color: #ffffff;
 }
@@ -492,7 +449,7 @@ footer .copyright nav ul li a {
   align-self: flex-end;
 }
 
-/* 6 FOOTER  */
+/* 5 FOOTER  */
 .footer-container {
   background-color: #1a8198;
 }
@@ -500,16 +457,15 @@ footer .copyright nav ul li a {
 footer {
   display: flex;
   justify-content: space-between;
-  max-width: 1240px;
   width: 100%;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding: 40px 0 30px;
   line-height: 1.567rem;
   gap: 58px;
 }
 .contact {
-  color: #ffffff !important;
+  width: 100%;
+  color: #ffffff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -521,20 +477,17 @@ footer {
 }
 
 .job-application {
-  max-width: 505px;
-
+  max-width: 510px;
   width: 100%;
+  display: flex;
+  gap: 18px;
 }
-
-.contact a {
-  background-color: #26a4bf;
-}
-
 .copyright {
   color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 400;
   letter-spacing: 0.2rem;
 }
@@ -542,22 +495,48 @@ footer {
 .copyright nav ul {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   gap: 35px;
-  color: #ffffff;
+  justify-content: flex-end;
+  font-weight: 400;
 }
 
 footer .copyright nav ul li a {
   color: #ffffff;
 }
 
-.vertical-line {
-  width: 2px;
-  background-color: #499aac;
+/* RESPONSIVE */
+@media (width < 1250px) {
+  .employee {
+    margin-top: 6%;
+  }
 }
-
-.horizontal-line {
-  width: 31px;
-  background-color: #000000;
-  height: 3px;
+@media (width<1040px) {
+  .work-env-info,
+  .employee-profile-info {
+    margin: 0 auto;
+    margin-top: 6%;
+    align-items: center;
+  }
+}
+@media (width<1025px) {
+  .job-application,
+  .contact-info {
+    margin: 0 auto;
+  }
+  .job-application {
+    margin-top: 6%;
+  }
+  .copyright {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .copyright nav ul {
+    flex-wrap: nowrap;
+  }
+}
+@media (width < 809px) {
+  header nav,
+  .yellow-blob {
+    display: none;
+  }
 }

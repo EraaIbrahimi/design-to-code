@@ -15,52 +15,63 @@
   <body>
     <!-- HEADER -->
     <div class="header-container">
-      <header>
-        <div class="yellow-blob">
-          <img src="./assets/icons/yellow-blob.svg" alt="" />
-        </div>
+      <header class="container-lg">
+        <div class="yellow-blob"></div>
         <div class="company-name">your company’s name</div>
-        <nav>
+        <nav class="header-nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
             <li>
-              <a href="#"><span style="color: #a1a1a1">What We Do</span></a>
-              <div class="horizontal-line"></div>
+              <a href="#">Home</a>
+              <div class="horizontal-line hide"></div>
             </li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">References</a></li>
+            <li>
+              <a href="#">About</a>
+              <div class="horizontal-line hide"></div>
+            </li>
+            <li>
+              <a href="#">What We Do</a>
+              <div class="horizontal-line hide"></div>
+            </li>
+            <li>
+              <a href="#">Services</a>
+              <div class="horizontal-line hide"></div>
+            </li>
+            <li>
+              <a href="#">References</a>
+              <div class="horizontal-line hide"></div>
+            </li>
           </ul>
         </nav>
       </header>
     </div>
-    <div class="container">
-      <!-- 1 -->
-      <div class="welcome-section">
-        <div class="main-image-wrapper">
+    <div class="container-xl">
+      <!-- 1 WELCOME SECTION -->
+      <section class="welcome-section container-xl">
+        <div class="main-image-wrapper container-lg">
           <img src="./assets/images/1-main-img.png" alt="" />
-          <div class="blue-blob">
+          <div class="blue-mask">
             <img src="./assets/icons/blue-blob.svg" alt="" />
           </div>
-          <div class="white-blob">
+          <div class="white-mask">
             <img src="./assets/icons/white-blob.svg" alt="" />
           </div>
         </div>
-      </div>
-      <!-- 2 -->
-      <div class="welcome-text">
-        <div class="welcome-text-title">
-          <h1>Welcome, <span style="color: #1a8198">person!</span></h1>
+      </section>
+      <section class="welcome-section-text container-lg">
+        <div class="title-paragraph title-paragraph-center">
+          <h1 class="title title-lg">
+            Welcome, <span class="blue-text-color">person!</span>
+          </h1>
           <p>We’re here for excellent service.</p>
         </div>
-        <div class="welcome-paragraph">
+        <div class="container-sm">
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
             commodo ligula eget dolor. Aenean massa. Cum sociis natoque
             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.
-            <span class="bolder"
+            <span class="bold-text"
               >Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
               arcu.</span
             ><br /><br />
@@ -68,26 +79,25 @@
             Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
             dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
             tellus.
-            <span class="bolder"
+            <span class="bold-text"
               >Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
               enim.</span
             >
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
           </p>
         </div>
-      </div>
+      </section>
 
-      <!-- 3 -->
-      <div class="employees-section">
+      <!-- 3 EMPLOYEES SECTION -->
+      <section class="employees-section container-xl">
         <div class="employee">
           <div class="employee-image">
             <img src="./assets/images/2-sub-img.png" alt="" />
-            <div class="blue-rect"></div>
           </div>
           <br /><br />
           <div class="employee-info">
-            <div class="employee-info-title">
-              <h2>title here</h2>
+            <div class="title-paragraph">
+              <h2 class="title">title here</h2>
               <p>this is a subheadline</p>
             </div>
 
@@ -95,79 +105,73 @@
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              <span class="bolder"
+              <span class="bold-text"
                 >Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                 sem. Nulla consequat massa quis enim. Donec pede justo,
                 fringilla vel, aliquet nec, vulputate eget, arcu.</span
               >
             </p>
-            <a href="#">read more</a>
+            <a class="link" href="#">read more</a>
           </div>
         </div>
         <div class="employee">
           <div class="employee-image">
             <img src="./assets/images/2-sub-img.png" alt="" />
-            <div class="blue-rect"></div>
           </div>
           <br /><br />
           <div class="employee-info">
-            <div class="employee-info-title">
-              <h2>title here</h2>
+            <div class="title-paragraph">
+              <h2 class="title">title here</h2>
               <p>this is a subheadline</p>
             </div>
-
-            <!-- <br /><br /> -->
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              <span class="bolder"
+              <span class="bold-text"
                 >Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                 sem. Nulla consequat massa quis enim. Donec pede justo,
                 fringilla vel, aliquet nec, vulputate eget, arcu.</span
               >
             </p>
-            <a href="#">read more</a>
+            <a class="link" href="#">read more</a>
           </div>
         </div>
         <div class="employee">
           <div class="employee-image">
             <img src="./assets/images/2-sub-img.png" alt="" />
-            <div class="blue-rect"></div>
           </div>
           <br /><br />
           <div class="employee-info">
-            <div class="employee-info-title">
-              <h2>title here</h2>
+            <div class="title-paragraph">
+              <h2 class="title">title here</h2>
               <p>this is a subheadline</p>
             </div>
-
-            <!-- <br /><br /> -->
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              <span class="bolder"
+              <span class="bold-text"
                 >Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                 sem. Nulla consequat massa quis enim. Donec pede justo,
                 fringilla vel, aliquet nec, vulputate eget, arcu.</span
               >
             </p>
-            <a href="#">read more</a>
+            <a class="link" href="#">read more</a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- 4 WORK ENVRIONMENT -->
       <div class="work-env-wrapper">
-        <div class="work-env-section">
+        <section class="work-env-section container-sm">
           <div class="work-env-image">
             <img src="./assets/images/3-sub-img-laptop.png" alt="" />
             <div class="blue-rect"></div>
           </div>
           <div class="work-env-info">
-            <div class="work-env-info-title">
-              <h2>title here</h2>
+            <div class="title-paragraph">
+              <h2 class="title">title here</h2>
               <p>this is a subheadline</p>
             </div>
             <p>
@@ -178,30 +182,27 @@
             <p>
               Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
               sem. Nulla consequat massa quis enim
-              <span class="bolder"
+              <span class="bold-text"
                 >Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
                 arcu.
               </span>
             </p>
-            <a href="#">read more</a>
+            <a class="link yellow-link" href="#">read more</a>
           </div>
-        </div>
+        </section>
       </div>
-
-      <!-- 5 EMPLOYEE PROFILE -->
     </div>
+    <!-- 5 EMPLOYEE PROFILE -->
     <div class="employee-profile-wrapper">
-      <div class="employee-profile-section">
+      <section class="employee-profile-section container-sm">
         <div class="employee-profile-image">
-          <div class="yellow-blob left">
-            <!-- <img src="./assets/icons/yellow-blob.svg" alt="" /> -->
-          </div>
+          <!-- <div class="yellow-blob left-blob"></div> -->
           <img src="./assets/images/4-sub-img-person.png" alt="" />
           <div class="blue-rect"></div>
         </div>
         <div class="employee-profile-info">
-          <div class="employee-profile-info-title">
-            <h2>hey, this is a good place for cta</h2>
+          <div class="title-paragraph">
+            <h2 class="title">hey, this is a good place for cta</h2>
             <p>this is a subheadline</p>
           </div>
           <p>
@@ -212,24 +213,25 @@
           <p>
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim
-            <span class="bolder"
+            <span class="bold-text"
               >Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
               arcu.
             </span>
           </p>
           <br /><br />
-          <a href="#">read more</a>
-          <div class="yellow-blob right"></div>
+          <a class="link dark-blue-link" href="#">read more</a>
+          <!-- <div class="yellow-blob right-blob"></div> -->
         </div>
-      </div>
+      </section>
     </div>
 
+    <!-- FOOTER -->
     <div class="footer-container">
-      <footer>
+      <footer class="container-lg">
         <div class="contact">
           <div class="contact-info">
-            <div class="contact-info-title">
-              <h2>hey, wanna talk?</h2>
+            <div class="title-paragraph">
+              <h2 class="title">hey, wanna talk?</h2>
               <p>this is a subheadline</p>
             </div>
             <br />
@@ -241,32 +243,35 @@
             <p>or write a fancy Mail: info@your-domain.com</p>
             <br />
             <p>
-              <span class="bolder">Office hours: </span>7.30am to 4.30pm, Mon -
-              Fri
+              <span class="bold-text">Office hours: </span>7.30am to 4.30pm, Mon
+              - Fri
             </p>
           </div>
-          <div class="vertical-line"></div>
           <div class="job-application">
-            <h2>btw: we’re hirin’</h2>
-            <p>and you just look like you’d fit in</p>
-            <br />
+            <div class="vertical-line"></div>
+            <div class="job-application-content">
+              <div class="title-paragraph">
+                <h2 class="title">btw: we’re hirin’</h2>
+                <p>and you just look like you’d fit in</p>
+              </div>
+              <br />
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu.
-            </p>
-            <br /><br />
-            <a href="#">let's go!</a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulputate eget, arcu.
+              </p>
+              <br /><br />
+              <a class="link" href="#">let's go!</a>
+            </div>
           </div>
         </div>
         <div class="copyright">
-          <div>
-            <p>© your company’s name | lega issues (link)</p>
-          </div>
+          <p>© your company’s name | legal issues (link)</p>
+
           <nav>
             <ul>
               <li><a href="#">home</a></li>
@@ -279,3 +284,4 @@
     </div>
   </body>
 </html>
+<script src="main.js"></script>
